@@ -6,7 +6,7 @@ RUN apt-get update -qq && apt-get install -y \
 RUN easy_install pip
 RUN pip install --upgrade scikit-learn
 RUN pip install --upgrade h5py
-RUN git clone --depth 1 https://github.com/Netflix/vmaf.git vmaf
+RUN git clone --depth 1 https://github.com/dhart-alldigital/vmaf.git vmaf
 ENV PYTHONPATH=/vmaf/python:$PYTHONPATH
 ENV PYTHONPATH=/vmaf:$PYTHONPATH
 ENV PATH=/vmaf:/vmaf/wrapper:$PATH
